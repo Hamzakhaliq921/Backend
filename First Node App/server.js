@@ -1,6 +1,8 @@
 const express = require('express')
 const path= require('path')
 const fs=require('fs');
+const os=require('os');
+
 const e = require('express');
 const { buffer } = require('stream/consumers');
 const app = express() 
@@ -96,3 +98,20 @@ fs.readFile(path.join(__dirname,'/test','text.txt'),'utf-8',function(ERROR,data)
         
     }
 })
+
+//os module
+console.log("hostname:",os.hostname());
+console.log("type of os:",os.type());
+console.log("archetecture os:",os.arch());
+console.log("paltform:",os.platform());
+console.log("deatil:",os.cpus());
+console.log("deatil:",os.freemem());
+console.log("deatil:",os.totalmem());
+console.log("deatil:",os.uptime());
+
+
+
+
+
+
+
