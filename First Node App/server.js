@@ -53,5 +53,14 @@ fs.writeFile(path.join(__dirname,'/test','text.txt'),"THIS IS TEXT FILE ",functi
     else{
         console.log('TEXT file  is created');
     }
+    //if you want to append do this
+    fs.appendFile(path.join(__dirname,'/test','text.txt'),"Appened text file ",function(ERROR){
+    if(ERROR){
+      console.log(ERROR);
+      return;
+    }
+    else{
+        console.log('data append');
+    }})
 
 })
