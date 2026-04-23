@@ -84,3 +84,15 @@ fs.readFile(path.join(__dirname,'/test','text.txt'),function(ERROR,data){
         
     }
 })
+
+//one more option to read with facing buffer
+fs.readFile(path.join(__dirname,'/test','text.txt'),'utf-8',function(ERROR,data){
+    if(ERROR){
+      console.log(ERROR);
+      return;
+    }
+    else{
+        console.log(data);
+        
+    }
+})
