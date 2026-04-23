@@ -1,5 +1,7 @@
 const express = require('express')
 const path= require('path')
+const fs=require('fs');
+const e = require('express');
 const app = express() 
 
 console.log('Folder anmee:'+path.dirname(__filename));
@@ -26,3 +28,30 @@ app.listen(3000, () => {
 })
 
 
+//file system (fs)
+
+//make a directory
+fs.mkdir(path.join(__dirname,'/test'),(error)=>{
+    if(error){
+      console.log(error);
+      return;
+    }
+    else{
+        console.log('Folder is created');
+        
+    }
+})
+//create file
+//write file
+//three parameters path,what do you want to write ,function for error
+
+fs.writeFile(path.join(__dirname,'/test','text.txt'),"THIS IS TEXT FILE ",function(ERROR){
+    if(ERROR){
+      console.log(ERROR);
+      return;
+    }
+    else{
+        console.log('TEXT file  is created');
+    }
+
+})
