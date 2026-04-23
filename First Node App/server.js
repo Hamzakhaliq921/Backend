@@ -2,6 +2,7 @@ const express = require('express')
 const path= require('path')
 const fs=require('fs');
 const e = require('express');
+const { buffer } = require('stream/consumers');
 const app = express() 
 
 console.log('Folder anmee:'+path.dirname(__filename));
@@ -44,6 +45,8 @@ fs.mkdir(path.join(__dirname,'/test'),(error)=>{
 //create file
 //write file
 //three parameters path,what do you want to write ,function for error
+//cannot create new file just iverrite all data of file 
+//if you want to add some things you have to append
 
 fs.writeFile(path.join(__dirname,'/test','text.txt'),"THIS IS TEXT FILE ",function(ERROR){
     if(ERROR){
@@ -54,7 +57,7 @@ fs.writeFile(path.join(__dirname,'/test','text.txt'),"THIS IS TEXT FILE ",functi
         console.log('TEXT file  is created');
     }
     //if you want to append do this
-    fs.appendFile(path.join(__dirname,'/test','text.txt'),"Appened text file ",function(ERROR){
+    fs.appendFile(path.join(__dirname,'/test','text.txt'),"\nAppened text file ",function(ERROR){
     if(ERROR){
       console.log(ERROR);
       return;
@@ -63,4 +66,21 @@ fs.writeFile(path.join(__dirname,'/test','text.txt'),"THIS IS TEXT FILE ",functi
         console.log('data append');
     }})
 
+})
+
+//readfile
+
+fs.readFile(path.join(__dirname,'/test','text.txt'),function(ERROR,data){
+    if(ERROR){
+      console.log(ERROR);
+      return;
+    }
+    else{
+        //print buufer
+        console.log(data);
+        //to conver do this
+        const cotent=Buffer.from(data)
+        console.log(cotent.toString());
+        
+    }
 })

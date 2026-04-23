@@ -1,1 +1,2 @@
-THIS IS TEXT FILE Appened text file 
+THIS IS TEXT FILE 
+Appened text file 
