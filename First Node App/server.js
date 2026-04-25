@@ -99,10 +99,12 @@ fs.readFile(path.join(__dirname,'/test','text.txt'),'utf-8',function(ERROR,data)
     }
 })
 
-//os module
+
+//os module paractise
+
 console.log("hostname:",os.hostname());
+
 console.log("type of os:",os.type());
-console.log("archetecture os:",os.arch());
 console.log("paltform:",os.platform());
 console.log("deatil:",os.cpus());
 console.log("deatil:",os.freemem());
