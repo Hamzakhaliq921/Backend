@@ -105,10 +105,15 @@ fs.readFile(path.join(__dirname,'/test','text.txt'),'utf-8',function(ERROR,data)
 console.log("hostname:",os.hostname());
 
 console.log("type of os:",os.type());
+
 console.log("paltform:",os.platform());
+
 console.log("deatil:",os.cpus());
+
 console.log("deatil:",os.freemem());
+
 console.log("deatil:",os.totalmem());
+
 console.log("deatil:",os.uptime());
 
 
