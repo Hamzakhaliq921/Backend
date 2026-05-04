@@ -37,7 +37,7 @@ app.listen(3000, () => {
 //file system (fs)
 
 //make a directory
-fs.mkdir(path.join(__dirname,'/test'),(error)=>{
+fs.mkdir(path.join(__dirname,'/test2'),(error)=>{
     if(error){
       console.log(error);
       return;
@@ -53,7 +53,7 @@ fs.mkdir(path.join(__dirname,'/test'),(error)=>{
 //cannot create new file just iverrite all data of file 
 //if you want to add some things you have to append
 
-fs.writeFile(path.join(__dirname,'/test','text.txt'),"THIS IS TEXT FILE ",function(ERROR){
+fs.writeFile(path.join(__dirname,'/test2','textrandom.txt'),"THIS IS TEXT FILE WTH RANDOM TXT ",function(ERROR){
     if(ERROR){
       console.log(ERROR);
       return;
@@ -62,7 +62,7 @@ fs.writeFile(path.join(__dirname,'/test','text.txt'),"THIS IS TEXT FILE ",functi
         console.log('TEXT file  is created');
     }
     //if you want to append do this
-    fs.appendFile(path.join(__dirname,'/test','text.txt'),"\nAppened text file ",function(ERROR){
+    fs.appendFile(path.join(__dirname,'/test2','textrandom.txt'),"\nAppened text file ",function(ERROR){
     if(ERROR){
       console.log(ERROR);
       return;
@@ -90,7 +90,7 @@ fs.readFile(path.join(__dirname,'/test','text.txt'),function(ERROR,data){
     }
 })
 
-//one more option to read with facing buffer
+//one more option to read withOUT facing buffer
 fs.readFile(path.join(__dirname,'/test','text.txt'),'utf-8',function(ERROR,data){
     if(ERROR){
       console.log(ERROR);
@@ -118,9 +118,6 @@ console.log("deatil:",os.freemem());
 console.log("deatil:",os.totalmem());
 
 console.log("deatil:",os.uptime());
-
-
-
 
 
 
