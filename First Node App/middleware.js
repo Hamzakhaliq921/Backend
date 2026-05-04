@@ -28,3 +28,17 @@ app.listen(3000,function(){
     console.log('server is running');
     
 })
+
+
+// 🔥 Express ka flow kya hota hai (Express.js)
+
+// Ek request aati hai → middleware chain se guzarti hai → route handler pe jaati hai → response send hota hai → request end
+
+// ❌ Tumhari misunderstanding
+
+// “baqi block ho jati hain”
+
+// 👉 Nahi, block nahi hoti, balki:
+
+// current request yahin terminate ho jati hai
+// next middleware/route call hi nahi hota
