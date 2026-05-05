@@ -4,5 +4,21 @@
 // 👉 One part of your program fires an event
 // 👉 Another part listens and reacts to it
 
+// Node.js uses an event-driven system, meaning:
+
+// Things happen (events)
+// Code responds to them (listeners)
+
+//require event
+const emitter=require('events')
+
+const myemitter=new emitter()
 
 
+myemitter.on('greet',(data)=>{
+
+console.log(`Hello ${data} how are you?`);
+
+})
+
+myemitter.emit('greet','HAMZA')
