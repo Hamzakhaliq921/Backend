@@ -73,8 +73,8 @@ fs.writeFile(path.join(__dirname,'/test2','textrandom.txt'),"THIS IS TEXT FILE W
 
 })
 
-//readfile
-
+//readfile  non blocking other workinh chalta raha ga (async) 
+//readfile syn is normal block code agar ya complete ho ga to next move hoga  
 fs.readFile(path.join(__dirname,'/test','text.txt'),function(ERROR,data){
     if(ERROR){
       console.log(ERROR);
@@ -133,3 +133,4 @@ console.log("deatil:",os.uptime());
 //     console.log('Server running on port 3000');
 // });
 
+ 
