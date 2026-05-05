@@ -10,15 +10,22 @@
 // Code responds to them (listeners)
 
 //require event
-const emitter=require('events')
+// const emitter=require('events')
 
-const myemitter=new emitter()
+// const myemitter=new emitter()
 
 
-myemitter.on('greet',(data)=>{
+// myemitter.on('greet',(data)=>{
 
-console.log(`Hello ${data} how are you?`);
+// console.log(`Hello ${data} how are you?`);
 
-})
+// })
 
-myemitter.emit('greet','HAMZA')
+// myemitter.emit('greet','HAMZA')
+
+//EXAMPLE
+myEmitter.on('orderPlaced', (food) => {
+  console.log(`Cooking ${food}...`);
+});
+
+myEmitter.emit('orderPlaced', 'Biryani');
